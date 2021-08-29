@@ -1,0 +1,70 @@
+---
+layout: default
+---
+
+<div class="right-content">
+<div class="right-wrap right-page right-resume">
+<div class="container-fruit">
+    <div class="row">
+        <div class="col-12">
+            <div class="title-page">
+                <h1>My Articles</h1>
+                <p>Artificial Intelligence</p>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="m-t-30"></div>
+        </div>
+    </div>
+
+
+<!-- Artigos -->
+{% for post in site.posts %}
+<div class="row">
+   <div class="col-lg-4 col-md-6 col-sm-6">
+        <article class="card-post">
+        
+        <!-- Img da thumbnail -->
+        {% if post.image.feature %}
+        <div class="img-post">
+            <a href="{{ site.url }}{{ post.url }}" target="blank"> <!-- Isso leva ao post -->
+        <!-- Img da thumbnail -->
+        <img src= 
+      {% if post.image.feature contains 'http' %}
+      "{{ post.image.feature }}"
+      {% else %}
+      "{{ site.url }}/images/{{ post.image.feature }}"
+      {% endif %}
+      alt="{{ post.title }} feature image" /> 
+    
+      </a>
+      {% if post.image.credit %}
+      <span class="image-credit">Photo Credit: <a href="{{ post.image.creditlink }}">{{ post.image.credit }}</a></span>
+      {% endif %}
+        </div><!-- /.image-wrap -->
+      {% endif %}
+        
+   <div class="meta-post">
+    {% include read_time.html %}
+    </div>
+    <div class="content-post">
+        <h2> {% if post.title %}
+           <p> <a href="{{ site.url }}{{ post.url }}" class="post-title" title="{{ post.title }}">{{ post.title }}</a>
+           </p>
+        </h2> {% endif %}
+        
+        <!-- Post Description -->
+        {% if post.excerpt %}
+        <div> {{ post.excerpt }}
+        </div> {% endif %}
+    </div> <!-- Post Description ends -->
+    
+                <div class="read-post">
+                    <a href="{{ site.url }}{{ post.url }}"
+                        target="blank">Continue Reading</a>
+                </div>
+            </article>
+        </div>
+    </div>
+{% endfor %}
+

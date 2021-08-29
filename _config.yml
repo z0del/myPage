@@ -1,0 +1,54 @@
+#
+###################################
+# Site wide configuration
+####################################
+#
+title: Title 
+email: g.lks@pm.me
+description: Long description
+url:  #https://z0del.github.io # the base hostname & protocol for your site
+
+#
+###################################
+# Jekyll configuration
+####################################
+#
+timezone:          America/Sao_paulo
+markdown:          kramdown
+highlighter:       rouge
+excerpt_separator: <!--more-->
+permalink:         /articles/:year-:month/:title
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
+
+#
+###################################
+# Subfolder in /CV
+###################################
+#
+collections:
+  cv:
+    output: true
+
+#
+###################################
+# Site Owner configuration
+####################################
+#
+owner:
+  name: In Tellus Integer
+  avatar: avatar.jpg
+  job: # Data Scientist @ GAVB Consulting
+ # bio: Data Scientist ● Algebraic Geometry and Statistical Learning ● Philosophy
+  email: foo@bar.me
+  disqus-shortname:
+  twitter: #username
+  github: git-user
+  gitlab: #username
+  stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
+  linkedin: in-user #username

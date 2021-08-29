@@ -1,0 +1,23 @@
+<div class="footer-box">
+    <ul class="list-social">
+        
+        {% if site.owner.linkedin %}
+        <li><a href="http://linkedin.com/in/{{ author.linkedin }}" target="blank"><i
+                    class="zmdi zmdi-hc-fw">
+                    <i class="zmdi zmdi-linkedin-box"></i></i></a></li>
+        {% endif %}
+        
+        {% if site.owner.github %}
+        <li><a href="http://github.com/{{ site.owner.github }}" target="_blank"><i
+                   class="zmdi zmdi-hc-fw"> 
+                   <i class="zmdi zmdi-github-box"></i></i></i></a></li>
+        {% endif %}
+        
+         {% if author.email %}
+           <li><a href="mailto:{{ author.email }}?subject=Hello from mailto!" class="zmdi zmdi-hc-lg" target="_blank"><i class="zmdi zmdi-email"></i></a></li>
+    {% endif %}
+        
+        
+    </ul>
+    <p class="foo-text">© 2021 Rewritten by <a href="https://github.com/z0del/"> g.lks</a> <br>Stolen from <a href="https://github.com/felipeoliverai/"> Felipe</a> <i class="zmdi zmdi-favorite-outline"></i> <br> Powered by <a href="http://jekyllrb.com/">Jekyll</a> </p>
+</div>
